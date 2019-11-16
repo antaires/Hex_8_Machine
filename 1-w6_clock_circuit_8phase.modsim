@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ModuleSim>
+  <view camX="-159.3779181935558" camY="91.07821122748437" zoom="3"/>
+  <ModuleSim>
+    <module ID="0" type="CLOCK">
+      <dim orient="0" x="425.0" y="-150.0"/>
+      <label size="0">8 Phase clock</label>
+      <inputs/>
+      <outputs>
+        <output ID="1"/>
+        <output ID="2"/>
+      </outputs>
+      <data clock_phase="0"/>
+    </module>
+    <module ID="3" type="ADDSUB">
+      <dim orient="0" x="50.0" y="-350.0"/>
+      <inputs>
+        <input ID="7"/>
+        <input ID="8"/>
+        <input ID="9"/>
+      </inputs>
+      <outputs>
+        <output ID="4"/>
+        <output ID="5"/>
+        <output ID="6"/>
+      </outputs>
+    </module>
+    <module ID="10" type="REGISTER">
+      <dim orient="0" x="50.0" y="-525.0"/>
+      <label size="0">H Register</label>
+      <inputs>
+        <input ID="11"/>
+        <input ID="12"/>
+      </inputs>
+      <outputs>
+        <output ID="13"/>
+        <output ID="14"/>
+      </outputs>
+      <data latched_value="0000"/>
+    </module>
+    <module ID="15" type="REGISTER">
+      <dim orient="0" x="275.0" y="225.0"/>
+      <inputs>
+        <input ID="16"/>
+        <input ID="17"/>
+      </inputs>
+      <outputs>
+        <output ID="18"/>
+        <output ID="19"/>
+      </outputs>
+      <data latched_value="0000"/>
+    </module>
+    <module ID="20" type="SWITCH">
+      <dim orient="0" x="100.0" y="-200.0"/>
+      <inputs/>
+      <outputs>
+        <output ID="21"/>
+      </outputs>
+      <data switch_set="0001"/>
+    </module>
+    <module ID="22" type="DEMUX">
+      <dim orient="0" x="125.0" y="175.0"/>
+      <label size="0">A1, B1 / A2, B2 / A3, B3 / A4, B4 / A5, B5</label>
+      <inputs>
+        <input ID="23"/>
+        <input ID="24"/>
+      </inputs>
+      <outputs>
+        <output ID="25"/>
+        <output ID="26"/>
+        <output ID="27"/>
+        <output ID="28"/>
+        <output ID="29"/>
+      </outputs>
+    </module>
+    <module ID="30" type="SWITCH">
+      <dim orient="0" x="100.0" y="375.0"/>
+      <inputs/>
+      <outputs>
+        <output ID="31"/>
+      </outputs>
+      <data switch_set="0001"/>
+    </module>
+  </ModuleSim>
+  <links>
+    <link src="4" targ="11" type="StraightPath"/>
+    <link src="21" targ="8" type="StraightPath"/>
+    <link src="2" targ="17" type="StraightPath">
+      <ctrlPt x="366.88607089550675" y="-126.80738849336745"/>
+      <ctrlPt x="366.88607089550675" y="226.12654785447572"/>
+    </link>
+    <link src="1" targ="12" type="StraightPath">
+      <ctrlPt x="239.13697737082734" y="-178.77312145255908"/>
+      <ctrlPt x="234.80649962422802" y="-523.0461023072037"/>
+    </link>
+    <link src="31" targ="23" type="StraightPath"/>
+    <link src="29" targ="7" type="StraightPath">
+      <ctrlPt x="22.33066757912744" y="174.81980063933185"/>
+    </link>
+    <link src="18" targ="24" type="StraightPath">
+      <ctrlPt x="269.4503215970224" y="171.99557602198442"/>
+    </link>
+    <link src="13" targ="16" type="StraightPath">
+      <ctrlPt x="50.76119539375767" y="-594.4989851260922"/>
+      <ctrlPt x="-215.56318602209944" y="-596.6642239993918"/>
+      <ctrlPt x="-213.3979471487998" y="505.4423625101307"/>
+      <ctrlPt x="284.6069937101201" y="509.77284025673003"/>
+    </link>
+  </links>
+</ModuleSim>
